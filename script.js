@@ -10,46 +10,27 @@ function calculateResult() {
         Number(document.getElementById("m7").value) +
         Number(document.getElementById("m8").value);
 
-    document.getElementById("total").innerHTML =
-        "Total Marks: " + totalMarks + "/800";
+
+    //let totalText = document.getElementById("total");
+    //let resultText = document.getElementById("result");
+
+    document.getElementById("total").innerHTML = "Total Marks: " + totalMarks + " / 800";
 
     if (totalMarks >= 700) {
-
-        document.getElementById("result").innerHTML =
-            "DISTINCTION";
-
+        document.getElementById("result").innerHTML = "DISTINCTION";
         document.getElementById("result").style.color = "green";
     }
-
     else if (totalMarks >= 600) {
-
-        document.getElementById("result").innerHTML =
-            "PASS, First Division";
-
-        document.getElementById("result").style.color = "blue";
+        document.getElementById("result").innerHTML = "PASS – First Division";
     }
-
     else if (totalMarks >= 500) {
-
-        document.getElementById("result").innerHTML =
-            "PASS, Second Division";
-
-        document.getElementById("result").style.color = "orange";
+        document.getElementById("result").innerHTML = "PASS – Second Division";
     }
-
     else if (totalMarks >= 400) {
-
-        document.getElementById("result").innerHTML =
-            "PASS, Third Division";
-
-        document.getElementById("result").style.color = "purple";
+        document.getElementById("result").innerHTML = "PASS – Third Division";
     }
-
     else {
-
-        document.getElementById("result").innerHTML =
-            "FAIL";
-
+        document.getElementById("result").innerHTML = "FAIL";
         document.getElementById("result").style.color = "red";
     }
 }
