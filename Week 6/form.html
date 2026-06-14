@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Realtime Database CRUD</title>
+</head>
+
+<body>
+
+    <h1>Firebase Realtime Database CRUD</h1>
+
+    <!-- Import JS -->
+    <script type="module" src="form.js"></script>
+
+    <!-- ================= CREATE ================= -->
+    <h2>Create User</h2>
+
+    <input type="text" id="create-id" placeholder="User ID"><br><br>
+
+    <input type="text" id="create-firstname" placeholder="First Name"><br><br>
+
+    <input type="text" id="create-lastname" placeholder="Last Name"><br><br>
+
+    <input type="text" id="create-address" placeholder="Address"><br><br>
+
+    <input type="number" id="create-age" placeholder="Age"><br><br>
+
+    <input type="email" id="create-email" placeholder="Email"><br><br>
+
+    <input type="text" id="create-contact" placeholder="Contact"><br><br>
+
+    <input type="number" id="create-marks" placeholder="Marks"><br><br>
+
+    <input type="date" id="create-dob"><br><br>
+
+    <input type="text" id="create-field" placeholder="Field"><br><br>
+
+    <button onclick="writeUserData(
+        document.getElementById('create-id').value,
+        document.getElementById('create-firstname').value,
+        document.getElementById('create-lastname').value,
+        document.getElementById('create-address').value,
+        document.getElementById('create-age').value,
+        document.getElementById('create-email').value,
+        document.getElementById('create-contact').value,
+        document.getElementById('create-marks').value,
+        document.getElementById('create-dob').value,
+        document.getElementById('create-field').value
+    )">
+        Add User
+    </button>
+
+    <hr>
+
+
+    <!-- ================= READ ALL ================= -->
+    <h2>Read All Users</h2>
+
+    <button onclick="readUser()">
+        Read Users (Console)
+    </button>
+
+    <hr>
+
+
+    <!-- ================= READ USER BY ID ================= -->
+    <h2>Read User By ID</h2>
+
+    <input type="text" id="read-id" placeholder="User ID">
+
+    <button onclick="readUserById(
+        document.getElementById('read-id').value
+    )">
+        Read User
+    </button>
+
+    <hr>
+
+
+    <!-- ================= FETCH USER FOR UPDATE ================= -->
+    <h2>Fetch User for Update</h2>
+
+    <input type="text" id="fetch-id" placeholder="User ID">
+
+    <button onclick="fetchUserForUpdate(
+        document.getElementById('fetch-id').value
+    )">
+        Fetch User
+    </button>
+
+    <hr>
+
+
+    <!-- ================= UPDATE ================= -->
+    <h2>Update User</h2>
+
+    <!-- User ID will automatically be filled after Fetch -->
+    <input type="text" id="update-id" placeholder="User ID" readonly><br><br>
+
+    <input type="text" id="update-firstname" placeholder="First Name"><br><br>
+
+    <input type="text" id="update-lastname" placeholder="Last Name"><br><br>
+
+    <input type="text" id="update-address" placeholder="Address"><br><br>
+
+    <input type="number" id="update-age" placeholder="Age"><br><br>
+
+    <input type="email" id="update-email" placeholder="Email"><br><br>
+
+    <input type="text" id="update-contact" placeholder="Contact"><br><br>
+
+    <input type="number" id="update-marks" placeholder="Marks"><br><br>
+
+    <input type="date" id="update-dob"><br><br>
+
+    <input type="text" id="update-field" placeholder="Field"><br><br>
+
+    <button onclick="updateUserData(
+        document.getElementById('update-id').value,
+        {
+            firstname: document.getElementById('update-firstname').value,
+            lastname: document.getElementById('update-lastname').value,
+            address: document.getElementById('update-address').value,
+            age: document.getElementById('update-age').value,
+            email: document.getElementById('update-email').value,
+            contact: document.getElementById('update-contact').value,
+            marks: document.getElementById('update-marks').value,
+            DOB: document.getElementById('update-dob').value,
+            Field: document.getElementById('update-field').value
+        }
+    )">
+        Update User
+    </button>
+
+    <hr>
+
+
+    <!-- ================= DELETE ================= -->
+    <h2>Delete User</h2>
+
+    <input type="text" id="delete-id" placeholder="User ID">
+
+    <button onclick="deleteUserData(
+        document.getElementById('delete-id').value
+    )">
+        Delete User
+    </button>
+
+</body>
+</html>
