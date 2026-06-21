@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Specs Style Recommendation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="mobile-container">
+
+    <!-- ═══════════════════════════
+         WELCOME SCREEN
+    ═══════════════════════════ -->
+    <section id="welcomeScreen" class="screen active">
+
+      <div class="welcome-hero">
+        <svg class="hero-glasses" viewBox="0 0 260 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="70"  cy="50" rx="52" ry="34" stroke="#CB997E" stroke-width="5"/>
+          <ellipse cx="190" cy="50" rx="52" ry="34" stroke="#CB997E" stroke-width="5"/>
+          <path d="M122 50 C126 36 134 36 138 50" stroke="#CB997E" stroke-width="5" stroke-linecap="round"/>
+          <path d="M18 30 Q8 20 2 14" stroke="#CB997E" stroke-width="5" stroke-linecap="round"/>
+          <path d="M242 30 Q252 20 258 14" stroke="#CB997E" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="70"  cy="50" rx="26" ry="17" fill="#CB997E" fill-opacity="0.1"/>
+          <ellipse cx="190" cy="50" rx="26" ry="17" fill="#CB997E" fill-opacity="0.1"/>
+        </svg>
+      </div>
+
+      <div class="welcome-body">
+        <span class="eyebrow">Style · Personality · Occasion</span>
+        <h1>Find Your<br/>Perfect Frame</h1>
+        <p>Discover eyeglass frames tailored to your outfit, personality, and every occasion.</p>
+        <button id="startBtn" class="btn btn-primary">
+          Get Started <span class="btn-arrow">→</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════
+         FORM SCREEN
+    ═══════════════════════════ -->
+    <section id="formScreen" class="screen">
+
+      <div class="screen-header">
+        <span class="eyebrow">Step 1 of 1</span>
+        <h2>Tell Us About<br/>Your Style</h2>
+        <p>Answer three quick questions to get your personalized frame recommendation.</p>
+      </div>
+
+      <div class="form-body">
+
+        <div class="field-group">
+          <label class="field-label" for="outfit">
+            <span class="field-icon">👔</span> Outfit Style
+          </label>
+          <div class="select-wrap">
+            <select id="outfit">
+              <option value="">Select your style…</option>
+              <option value="Formal">Formal</option>
+              <option value="Casual">Casual</option>
+              <option value="Sporty">Sporty</option>
+            </select>
+            <span class="select-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1l5 5 5-5" stroke="#CB997E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="personality">
+            <span class="field-icon">✨</span> Personality
+          </label>
+          <div class="select-wrap">
+            <select id="personality">
+              <option value="">Select your personality…</option>
+              <option value="Professional">Professional</option>
+              <option value="Creative">Creative</option>
+              <option value="Active">Active</option>
+            </select>
+            <span class="select-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1l5 5 5-5" stroke="#CB997E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="occasion">
+            <span class="field-icon">📍</span> Occasion
+          </label>
+          <div class="select-wrap">
+            <select id="occasion">
+              <option value="">Select an occasion…</option>
+              <option value="Work">Work</option>
+              <option value="Daily">Daily</option>
+              <option value="Outdoor">Outdoor</option>
+            </select>
+            <span class="select-chevron">
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1l5 5 5-5" stroke="#CB997E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <button id="recommendBtn" class="btn btn-primary">
+          Get Recommendation <span class="btn-arrow">→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════
+         RESULT SCREEN
+    ═══════════════════════════ -->
+    <section id="resultScreen" class="screen">
+
+      <div class="screen-header">
+        <span class="badge badge-accent">✦ Matched For You</span>
+        <h2>Your<br/>Recommendation</h2>
+      </div>
+
+      <div class="frame-card">
+        <div class="frame-img-wrap">
+          <img id="frameImage" src="rectangle-frame.png" alt="Recommended Frame" />
+        </div>
+        <div class="frame-card-body">
+          <h3 id="frameTitle">Rectangle Frame</h3>
+          <p id="frameDescription">Recommended frame description goes here.</p>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button id="detailsBtn" class="btn btn-primary">Details</button>
+        <button id="profileBtn" class="btn btn-outline">Profile</button>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════
+         DETAILS SCREEN
+    ═══════════════════════════ -->
+    <section id="detailsScreen" class="screen">
+
+      <div class="screen-header">
+        <span class="eyebrow">Frame Details</span>
+        <h2 id="detailTitle">Rectangle Frame</h2>
+        <div class="tag-row" id="detailTags">
+          <span class="tag-chip">Classic</span>
+          <span class="tag-chip">Professional</span>
+          <span class="tag-chip">Structured</span>
+        </div>
+      </div>
+
+      <div class="detail-img-wrap">
+        <img id="detailImage" src="rectangle-frame.png" alt="Frame Detail" />
+      </div>
+
+      <div class="detail-desc-label">About this frame</div>
+      <p id="detailText">Rectangle frames suit professional and formal appearances. They provide a structured and confident look.</p>
+
+      <button id="aboutBtn" class="btn btn-secondary" style="margin-top: auto;">
+        About the App
+      </button>
+
+    </section>
+
+    <!-- ═══════════════════════════
+         ABOUT SCREEN
+    ═══════════════════════════ -->
+    <section id="aboutScreen" class="screen screen-about">
+
+      <div class="about-icon">👓</div>
+
+      <span class="eyebrow" style="color: var(--primary-dark); text-align: center;">Version 1.0</span>
+      <h2 class="about-title">Specs Style<br/>Recommendation</h2>
+      <p class="about-desc">This app helps you discover the best eyeglass frames based on your unique style preferences, personality, and the occasions that matter to you.</p>
+
+      <div class="about-divider"></div>
+
+      <div class="about-info-row">
+        <div class="about-info-item">
+          <span class="about-info-num">3</span>
+          <span class="about-info-label">Frame Styles</span>
+        </div>
+        <div class="about-info-divider"></div>
+        <div class="about-info-item">
+          <span class="about-info-num">9</span>
+          <span class="about-info-label">Combinations</span>
+        </div>
+        <div class="about-info-divider"></div>
+        <div class="about-info-item">
+          <span class="about-info-num">∞</span>
+          <span class="about-info-label">Possibilities</span>
+        </div>
+      </div>
+
+      <button id="goProfileBtn" class="btn btn-primary" style="margin-top: auto;">
+        View Profile
+      </button>
+
+    </section>
+
+    <!-- ═══════════════════════════
+         PROFILE SCREEN
+    ═══════════════════════════ -->
+    <section id="profileScreen" class="screen screen-profile">
+
+      <div class="profile-hero">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar">👤</div>
+          <div class="profile-avatar-ring"></div>
+        </div>
+        <h3 class="profile-name">User Name</h3>
+        <p class="profile-email">username@email.com</p>
+        <div class="profile-badge">Member</div>
+      </div>
+
+      <div class="profile-menu-card">
+
+        <div class="menu-item" data-action="preferences">
+          <div class="menu-item-left">
+            <div class="menu-icon menu-icon--pref">🎯</div>
+            <span>My Preferences</span>
+          </div>
+          <span class="menu-chevron">›</span>
+        </div>
+
+        <div class="menu-item" data-action="about">
+          <div class="menu-item-left">
+            <div class="menu-icon menu-icon--about">ℹ️</div>
+            <span>About Us</span>
+          </div>
+          <span class="menu-chevron">›</span>
+        </div>
+
+        <div class="menu-item menu-item--logout" data-action="logout">
+          <div class="menu-item-left">
+            <div class="menu-icon menu-icon--logout">🚪</div>
+            <span>Log Out</span>
+          </div>
+          <span class="menu-chevron menu-chevron--red">›</span>
+        </div>
+
+      </div>
+
+      <button id="homeBtn" class="btn btn-outline">← Back to Home</button>
+
+    </section>
+
+  </div><!-- /.mobile-container -->
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
